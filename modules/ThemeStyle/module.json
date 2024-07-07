@@ -1,0 +1,11 @@
+{
+    "name": "ThemeStyle",
+    "alias": "themestyle",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ThemeStyle\\App\\Providers\\ThemeStyleServiceProvider"
+    ],
+    "files": []
+}

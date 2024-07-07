@@ -1,0 +1,23 @@
+{
+    "name": "crm/brands",
+    "description": "",
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Brands\\": "",
+            "Modules\\Brands\\App\\": "app/",
+            "Modules\\Brands\\Database\\Factories\\": "database/factories/",
+            "Modules\\Brands\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Brands\\Tests\\": "tests/"
+        }
+    }
+}

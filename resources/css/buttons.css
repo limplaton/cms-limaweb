@@ -1,0 +1,181 @@
+ 
+@layer components {
+  .btn {
+    /* Base */
+    @apply relative isolate inline-flex items-center justify-center gap-x-2 rounded-lg border text-base/6 font-semibold;
+
+    /* Shadow */
+    @apply before:absolute before:inset-0 before:-z-10 before:rounded-lg before:bg-[--btn-bg] before:shadow-sm after:absolute after:inset-0 after:-z-10 after:rounded-lg after:shadow-[shadow:inset_0_1px_theme(colors.white/15%)] dark:border-white/5 dark:before:hidden dark:after:-inset-px dark:after:rounded-lg;
+
+    /* Sizing */
+    @apply px-[calc(theme(spacing[3.5])-1px)] py-[calc(theme(spacing[2.5])-1px)] sm:px-[calc(theme(spacing.3)-1px)] sm:py-[calc(theme(spacing[1.5])-1px)] sm:text-sm/6;
+
+    /* Focus */
+    @apply outline-none focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500;
+
+    /* Disabled */
+    @apply disabled:pointer-events-none disabled:opacity-50 disabled:before:shadow-none disabled:after:shadow-none;
+
+    /* Icon */
+    @apply [&>[data-slot=icon]]:pointer-events-none [&>[data-slot=icon]]:-mx-0.5 [&>[data-slot=icon]]:my-0.5 [&>[data-slot=icon]]:size-5 [&>[data-slot=icon]]:shrink-0 [&>[data-slot=icon]]:sm:my-1 [&>[data-slot=icon]]:sm:size-4;
+
+    /* Colors */
+    @apply border-[--btn-border] bg-[--btn-bg] text-[--btn-color];
+  }
+
+  @each $color in primary, success, info, warning, danger {
+    .btn-$(color) {
+      --btn-color: white;
+      --btn-bg: rgba(var(--color-$(color)-600));
+      --btn-border: rgba(var(--color-$(color)-600));
+
+      &:hover,
+      &[data-active],
+      &:active {
+        --btn-bg: rgba(var(--color-$(color)-500));
+        --btn-border: rgba(var(--color-$(color)-500));
+      }
+
+      &.btn-soft {
+        --btn-color: rgba(var(--color-$(color)-800));
+        --btn-bg: rgba(var(--color-$(color)-100));
+        --btn-border: rgba(var(--color-$(color)-100));
+        @apply before:hidden after:hidden;
+
+        &:hover,
+        &[data-active],
+        &:active {
+          --btn-color: rgba(var(--color-$(color)-900));
+          --btn-bg: rgba(var(--color-$(color)-200));
+          --btn-border: rgba(var(--color-$(color)-200));
+        }
+      }
+
+      &.btn-ghost {
+        --btn-color: rgba(var(--color-$(color)-800));
+        --btn-bg: transparent;
+        --btn-border: transparent;
+        @apply before:hidden after:hidden;
+
+        &:hover,
+        &[data-active],
+        &:active {
+          --btn-color: rgba(var(--color-$(color)-800));
+          --btn-bg: rgba(var(--color-$(color)-100));
+          --btn-border: rgba(var(--color-$(color)-100));
+        }
+      }
+    }
+
+    /* Dark mode */
+    .dark .btn-$(color) {
+      --btn-color: white;
+      --btn-bg: rgba(var(--color-$(color)-700));
+      --btn-border: rgba(var(--color-$(color)-700));
+      @apply before:hidden after:hidden;
+
+      &:hover,
+      &[active],
+      &:active {
+        --btn-bg: rgba(var(--color-$(color)-600));
+        --btn-border: rgba(var(--color-$(color)-600));
+      }
+
+      &.btn-soft {
+        --btn-color: rgba(var(--color-$(color)-900));
+        --btn-bg: rgba(var(--color-$(color)-200));
+        --btn-border: rgba(var(--color-$(color)-200));
+        @apply before:hidden after:hidden;
+
+        &:hover,
+        &[active],
+        &:active {
+          --btn-color: rgba(var(--color-$(color)-800));
+          --btn-bg: rgba(var(--color-$(color)-100));
+          --btn-border: rgba(var(--color-$(color)-100));
+        }
+      }
+
+      &.btn-ghost {
+        --btn-color: rgba(var(--color-$(color)-200));
+        --btn-bg: transparent;
+        --btn-border: transparent;
+        @apply border-transparent before:hidden after:hidden;
+
+        &:hover,
+        &[active],
+        &:active {
+          --btn-color: rgba(var(--color-$(color)-200));
+          --btn-bg: rgba(var(--color-$(color)-400), 10%);
+          --btn-border: rgba(var(--color-$(color)-400), 10%);
+        }
+      }
+    }
+  }
+
+  .btn-sm {
+    /* Base */
+    @apply text-sm/6 font-medium;
+
+    /* Sizing */
+    @apply px-[calc(theme(spacing[2.5])-1px)] py-[calc(theme(spacing[1.5])-1px)] sm:px-[calc(theme(spacing.2)-1px)] sm:py-[calc(theme(spacing[0.5])-1px)] sm:text-xs/6;
+
+    /* Border radius */
+    @apply rounded-md before:rounded-md after:rounded-md;
+  }
+
+  .btn-pill {
+    /* Base */
+    @apply rounded-full;
+
+    /* Sizing */
+    @apply px-[calc(theme(spacing[3.5])+5px)] sm:px-[calc(theme(spacing.3)+5px)];
+
+    /* Border radius */
+    @apply before:rounded-full after:rounded-full dark:after:rounded-full;
+
+    /* Icon */
+    &:has(:only-child[data-slot='icon']),
+    &:has([data-slot='icon'] ~ [data-loading]) {
+      /* Sizing with icon */
+      @apply px-[calc(theme(spacing[3.5])-2px)] py-[calc(theme(spacing[2.5])-2px)] sm:px-[calc(theme(spacing.[2.5])-1px)] sm:py-[calc(theme(spacing[1])-1px)];
+
+      @apply [&>[data-slot=icon]]:size-6 [&>[data-slot=icon]]:sm:size-5;
+
+      &.btn-sm {
+        @apply [&>[data-slot=icon]]:size-5 [&>[data-slot=icon]]:sm:size-4;
+      }
+    }
+  }
+
+  .btn-basic {
+    /* Base Colors */
+    @apply [--btn-bg:transparent] [--btn-border:transparent] [--btn-color:theme(colors.neutral.700)] dark:border-transparent dark:[--btn-bg:transparent] dark:[--btn-border:transparent] dark:[--btn-color:theme(colors.white)];
+
+    /* Shadow */
+    @apply before:hidden after:hidden;
+
+    /* Hover Background */
+    @apply hover:[--btn-bg:theme(colors.neutral.100)] dark:hover:[--btn-bg:theme(colors.neutral.600/20%)];
+
+    /* Hover Color */
+    @apply hover:[--btn-color:theme(colors.neutral.900)] dark:hover:[--btn-color:theme(colors.neutral.200)];
+
+    /* Active */
+    @apply data-[active]:[--btn-bg:theme(colors.neutral.100)!important] data-[active]:[--btn-color:theme(colors.neutral.900)] dark:data-[active]:[--btn-bg:theme(colors.neutral.600/20%)!important] dark:data-[active]:[--btn-color:theme(colors.neutral.200)];
+
+    @apply active:[--btn-bg:theme(colors.neutral.100)!important] active:[--btn-color:theme(colors.neutral.900)] dark:active:[--btn-bg:theme(colors.neutral.600/20%)!important] dark:active:[--btn-color:theme(colors.neutral.200)];
+  }
+
+  .btn-secondary {
+    @apply [--btn-color:theme(colors.neutral.700)] [--btn-bg:theme(colors.white)] [--btn-border:theme(colors.neutral.300)] dark:[--btn-color:theme(colors.white)] dark:[--btn-bg:theme(colors.neutral.500/10%)] dark:[--btn-border:theme(colors.neutral.500/30%)];
+
+    /* Hover Background */
+    @apply hover:[--btn-bg:theme(colors.neutral.50)] dark:hover:[--btn-bg:theme(colors.neutral.500/40%)];
+
+    /* Active */
+    @apply data-[active]:[--btn-bg:theme(colors.neutral.50)!important] dark:data-[active]:[--btn-bg:theme(colors.neutral.500/40%)!important];
+
+    @apply active:[--btn-bg:theme(colors.neutral.50)!important] dark:active:[--btn-bg:theme(colors.neutral.500/40%)!important];
+  }
+}

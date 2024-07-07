@@ -1,0 +1,26 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Modules\MailClient\App\Mail\MailableTemplate;
+use Modules\Core\App\MailableTemplate\DefaultMailable;
+
+class $CLASS$ extends MailableTemplate implements ShouldQueue
+{
+    /**
+     * Create a new mailable template instance.
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Provides the mailable template default configuration.
+     */
+    public static function default(): DefaultMailable
+    {
+        return new DefaultMailable('Default content', static::name());
+    }
+}

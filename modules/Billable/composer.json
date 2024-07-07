@@ -1,0 +1,23 @@
+{
+    "name": "crm/billable",
+    "description": "",
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Billable\\": "",
+            "Modules\\Billable\\App\\": "app/",
+            "Modules\\Billable\\Database\\Factories\\": "database/factories/",
+            "Modules\\Billable\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Billable\\Tests\\": "tests/"
+        }
+    }
+}

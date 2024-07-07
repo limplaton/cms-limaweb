@@ -1,0 +1,23 @@
+{
+    "name": "crm/activities",
+    "description": "",
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Activities\\": "",
+            "Modules\\Activities\\App\\": "app/",
+            "Modules\\Activities\\Database\\Factories\\": "database/factories/",
+            "Modules\\Activities\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Activities\\Tests\\": "tests/"
+        }
+    }
+}

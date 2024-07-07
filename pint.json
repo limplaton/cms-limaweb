@@ -1,0 +1,6 @@
+{
+    "exclude": [
+        "_build",
+        "_patch"
+    ]
+}

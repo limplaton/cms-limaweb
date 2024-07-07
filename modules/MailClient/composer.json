@@ -1,0 +1,23 @@
+{
+    "name": "crm/mailclient",
+    "description": "",
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\MailClient\\": "",
+            "Modules\\MailClient\\App\\": "app/",
+            "Modules\\MailClient\\Database\\Factories\\": "database/factories/",
+            "Modules\\MailClient\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\MailClient\\Tests\\": "tests/"
+        }
+    }
+}

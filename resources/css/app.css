@@ -1,0 +1,62 @@
+ 
+/* https://tailwindcss.com/docs/using-with-preprocessors#build-time-imports */
+@import './variables.css';
+@import './buttons.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .wysiwyg-text {
+        @apply prose prose-base prose-neutral max-w-none leading-6 dark:prose-invert sm:prose-sm prose-headings:my-3 prose-headings:font-semibold first:prose-p:mt-0 last:prose-p:mb-0 prose-a:text-primary-600 hover:prose-a:text-primary-900;
+    }
+}
+
+[v-cloak] {
+    display: none !important;
+}
+
+/**
+ If default border color is needed apply the CSS below
+
+ *, :after, :before {
+    border-color: rgb(var(--color-neutral-200));
+}
+*/
+
+.flip-list-move {
+    transition: transform 0.6s;
+}
+
+.drag-ghost-rounded {
+    @apply rounded-md border border-dashed border-neutral-400 opacity-60;
+}
+
+.drag-ghost {
+    @apply border border-dashed border-neutral-400 opacity-60;
+}
+
+.mention {
+    @apply rounded-md bg-neutral-100 px-1 py-0.5 text-base text-neutral-800 sm:text-sm;
+}
+
+/* z-index fixes */
+
+#_cbhtml #divSnippetList,
+.is-ui #divSnippetList {
+    z-index: 1000;
+}
+
+.dialog {
+    z-index: 1050;
+}
+
+.notification,
+.notifications {
+    z-index: 1200;
+}
+
+.confetti {
+    z-index: 1350;
+}

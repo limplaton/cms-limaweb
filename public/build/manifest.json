@@ -1,0 +1,75 @@
+{
+  "_twilio.min-5KJe3qF0.js": {
+    "file": "assets/twilio.min-5KJe3qF0.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_vuedraggable.umd-Hb-xBJQZ.js": {
+    "file": "assets/vuedraggable.umd-Hb-xBJQZ.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "modules/Core/resources/js/components/CropsAndUploadsImage.vue": {
+    "file": "assets/CropsAndUploadsImage-By5Is3ag.js",
+    "src": "modules/Core/resources/js/components/CropsAndUploadsImage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/CropsAndUploadsImage-BmOS4t_i.css"
+    ]
+  },
+  "modules/Core/resources/js/components/FullCalendar.vue": {
+    "file": "assets/FullCalendar-D8xHpkRH.js",
+    "src": "modules/Core/resources/js/components/FullCalendar.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/FullCalendar-Dolz0C-W.css"
+    ]
+  },
+  "modules/Core/resources/js/components/TextCollapse.vue": {
+    "file": "assets/TextCollapse-DhKOVfw1.js",
+    "src": "modules/Core/resources/js/components/TextCollapse.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "node_modules/v-calendar/dist/es/index.js": {
+    "file": "assets/index-DBPiAoHo.js",
+    "src": "node_modules/v-calendar/dist/es/index.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/css/contentbuilder/theme.css": {
+    "file": "assets/theme-Df1XprCV.css",
+    "src": "resources/css/contentbuilder/theme.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-BQnv5pK3.js",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "node_modules/v-calendar/dist/es/index.js",
+      "modules/Core/resources/js/components/FullCalendar.vue",
+      "_vuedraggable.umd-Hb-xBJQZ.js",
+      "modules/Core/resources/js/components/TextCollapse.vue",
+      "modules/Core/resources/js/components/CropsAndUploadsImage.vue",
+      "_twilio.min-5KJe3qF0.js"
+    ],
+    "css": [
+      "assets/app-CHQuQFIU.css"
+    ]
+  }
+}

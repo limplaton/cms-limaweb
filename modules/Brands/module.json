@@ -1,0 +1,11 @@
+{
+    "name": "Brands",
+    "alias": "brands",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Brands\\App\\Providers\\BrandsServiceProvider"
+    ],
+    "files": []
+}

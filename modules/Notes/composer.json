@@ -1,0 +1,23 @@
+{
+    "name": "crm/notes",
+    "description": "",
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Notes\\": "",
+            "Modules\\Notes\\App\\": "app/",
+            "Modules\\Notes\\Database\\Factories\\": "database/factories/",
+            "Modules\\Notes\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Notes\\Tests\\": "tests/"
+        }
+    }
+}

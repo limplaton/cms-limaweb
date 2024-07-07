@@ -1,0 +1,23 @@
+{
+    "name": "crm/deals",
+    "description": "",
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Deals\\": "",
+            "Modules\\Deals\\App\\": "app/",
+            "Modules\\Deals\\Database\\Factories\\": "database/factories/",
+            "Modules\\Deals\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Deals\\Tests\\": "tests/"
+        }
+    }
+}

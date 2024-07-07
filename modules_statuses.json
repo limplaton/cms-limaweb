@@ -1,0 +1,17 @@
+{
+    "Documents": true,
+    "WebForms": true,
+    "Core": true,
+    "Translator": true,
+    "Activities": true,
+    "Billable": true,
+    "Contacts": true,
+    "MailClient": true,
+    "Notes": true,
+    "Calls": true,
+    "Deals": true,
+    "Users": true,
+    "Brands": true,
+    "Comments": true,
+    "ThemeStyle": true
+}

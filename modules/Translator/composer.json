@@ -1,0 +1,23 @@
+{
+    "name": "crm/translator",
+    "description": "",
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Translator\\": "",
+            "Modules\\Translator\\App\\": "app/",
+            "Modules\\Translator\\Database\\Factories\\": "database/factories/",
+            "Modules\\Translator\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Translator\\Tests\\": "tests/"
+        }
+    }
+}

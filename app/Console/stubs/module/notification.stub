@@ -1,0 +1,42 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Notifications\Notification;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Notifications\Messages\MailMessage;
+use Modules\Core\App\Notifications\Notification;
+
+class $CLASS$ extends Notification implements ShouldQueue
+{
+    /**
+     * Create a new notification instance.
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Get the mail representation of the notification.
+     *
+     * @return \Illuminate\Notifications\Messages\MailMessage|\Modules\Core\App\MailableTemplate\MailableTemplate
+     */
+    public function toMail(object $notifiable)
+    {
+        //
+    }
+
+    /**
+     * Get the array representation of the notification.
+     *
+     * @return array<string, mixed>
+     */
+    public function toArray($notifiable): array
+    {
+        return [
+            //
+        ];
+    }
+}

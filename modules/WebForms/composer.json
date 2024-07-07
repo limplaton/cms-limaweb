@@ -1,0 +1,23 @@
+{
+    "name": "crm/webforms",
+    "description": "",
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\WebForms\\": "",
+            "Modules\\WebForms\\App\\": "app/",
+            "Modules\\WebForms\\Database\\Factories\\": "database/factories/",
+            "Modules\\WebForms\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\WebForms\\Tests\\": "tests/"
+        }
+    }
+}

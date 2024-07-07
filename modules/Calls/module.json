@@ -1,0 +1,12 @@
+{
+    "name": "Calls",
+    "alias": "calls",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Calls\\App\\Providers\\CallsServiceProvider",
+        "Modules\\Calls\\App\\Providers\\VoIPServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,171 @@
+.contentbuilder {
+    [class^="size-"] {
+        width: initial !important;
+        height: initial !important;
+    }
+
+    @import '../../public/static/contentbuilder/assets/minimalist-blocks/content';
+
+    ul,
+    ol {
+        list-style: revert;
+        margin: inherit;
+        padding: inherit;
+    }
+
+    /* page break styles */
+    .page-break {
+        height: 40px;
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+        opacity: 0.5;
+        margin-top: 10px;
+    }
+
+    .is-card-circle {
+        border-radius: 100% !important;
+        padding: 0 !important;
+    }
+
+    img,
+    svg,
+    video,
+    canvas,
+    audio,
+    iframe,
+    embed,
+    object {
+        display: initial;
+    }
+}
+
+.is-rte-tool {
+    margin-top: 110px !important;
+}
+
+/* hide these quick add because we are adding 2 new snippets */
+button.add-map,
+button.add-social {
+    display: none !important;
+}
+
+.contenteditable-view .page-break,
+.contenteditable-view .signatures-section {
+    display: none !important;
+}
+
+// Not supported builder features
+// #divButtonTemplateList not supported because the buttons are not styled as we are applying the styles only to the .contentbuilder div
+.input-cell-gradient,
+.input-elm-gradient,
+.input-row-gradient,
+.add-code,
+
+//  html purifier does not allow filter: grayscale(1)
+.label-cell-grayscale,
+.label-row-grayscale,
+.label-elm-grayscale,
+
+// text settings via the top toolbar, disables font weight
+.label-fontweight,
+.rte-fontweight-options,
+
+#tabElementShadow,
+#tabElementAttribute,
+#divElementMoreItems #tabElementMore,
+a[data-content="divButtonTemplates"],
+a[data-content="divButtonHover"],
+a[data-content="divMyButtons"] {
+    display: none !important;
+}
+
+#inpElmFontWeight {
+
+    // Not all fonts have them
+    option[value="800"],
+    option[value="900"] {
+        display: none;
+    }
+}
+
+#divElementEffect {
+    div {
+
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8),
+        &:nth-child(9),
+        &:nth-child(10),
+        &:nth-child(11) {
+            display: none;
+        }
+    }
+}
+
+/* there is a bug in the toolbar, when focused on column shows the add snippet twice, currently disabled */
+.rte-addsnippet+.rte-addsnippet {
+    display: none !important;
+}
+
+/* proper margin on toolbar */
+.is-rte-tool {
+    margin-top: 85px;
+}
+
+.is-rowadd-tool>button {
+    margin-top: -2px !important;
+}
+
+/* do not show the plugins on other then quick row add */
+.is-pop.quickadd:not([data-mode="row"]) {
+
+    button.quick-add-products,
+    button.quick-add-signatures,
+    button.quick-add-pagebreak {
+        display: none !important;
+    }
+}
+
+/*  makes the more and the last 4 quick-add buttons bold, TODO: not working */
+.is-pop.quickadd button:nth-last-child(-n + 7) {
+    font-weight: 600 !important;
+}
+
+#_cbhtml .is-modal.imagelink .image-link button,
+.is-ui .is-modal.imagelink .image-link button,
+#_cbhtml .is-modal.createlink .input-select,
+.is-ui .is-modal.createlink .input-select,
+#_cbhtml .is-modal.insertimage .image-src>button,
+.is-ui .is-modal.insertimage .image-src>button,
+#_cbhtml .is-modal.imagelink .image-src button,
+.is-ui .is-modal.imagelink .image-src button,
+#_cbhtml .is-modal.videolink .input-select,
+.is-ui .is-modal.videolink .input-select,
+.input-cell-bgimage+button.input-select,
+#divElementGeneral .input-elm-bgimage+.input-select,
+#divElementGeneral>div.is-separator,
+#_cbhtml .is-modal.imagesource .image-src>button,
+#_cbhtml .is-modal.mediasource .image-src>button,
+.is-ui .is-modal.imagesource .image-src>button,
+.is-ui .is-modal.mediasource .image-src>button,
+#_cbhtml .is-modal.columnsettings .is-tabs #tabCellMore,
+.is-ui .is-modal.columnsettings .is-tabs #tabCellMore,
+#_cbhtml .is-modal.rowsettings .is-tabs #tabRowMore,
+.is-ui .is-modal.rowsettings .is-tabs #tabRowMore,
+#divImageTool .open-asset,
+// col general tab separator
+.is-separator:has(+ .div-target) {
+    display: none !important;
+}
+
+/* Icon support */
+@import '../../public/static/contentbuilder/assets/ionicons/css/ionicons';
+
+// Do not allow applying element styles to the row, it may mess up the PDF if padding is added.
+.is-side.elementstyles .elm-list a:first-child {
+    pointer-events: none;
+}

@@ -1,0 +1,18 @@
+{
+    "name": "Core",
+    "alias": "core",
+    "description": "",
+    "keywords": [],
+    "priority": 10000,
+    "providers": [
+        "Modules\\Core\\App\\Providers\\CoreServiceProvider",
+        "Modules\\Core\\App\\Providers\\UpdaterServiceProvider",
+        "Modules\\Core\\App\\Providers\\PurifierServiceProvider",
+        "Modules\\Core\\App\\Providers\\OAuthServiceProvider",
+        "Modules\\Core\\App\\Providers\\ReCaptchaServiceProvider",
+        "Webpatser\\Countries\\CountriesServiceProvider"
+    ],
+    "files": [
+        "App/Support/helpers.php"
+    ]
+}

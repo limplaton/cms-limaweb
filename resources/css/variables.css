@@ -1,0 +1,76 @@
+ 
+:root {
+  --navbar-height: 4rem;
+
+  /* Tailwind color: slate */
+  --color-neutral-50: 248, 250, 252;
+  --color-neutral-100: 241, 245, 249;
+  --color-neutral-200: 226, 232, 240;
+  --color-neutral-300: 203, 213, 225;
+  --color-neutral-400: 148, 163, 184;
+  --color-neutral-500: 100, 116, 139;
+  --color-neutral-600: 71, 85, 105;
+  --color-neutral-700: 51, 65, 85;
+  --color-neutral-800: 30, 41, 59;
+  --color-neutral-900: 15, 23, 42;
+
+  /* Tailwind color: indigo */
+  --color-primary-50: 238, 242, 255;
+  --color-primary-100: 224, 231, 255;
+  --color-primary-200: 199, 210, 254;
+  --color-primary-300: 165, 180, 252;
+  --color-primary-400: 129, 140, 248;
+  --color-primary-500: 99, 102, 241;
+  --color-primary-600: 79, 70, 229;
+  --color-primary-700: 67, 56, 202;
+  --color-primary-800: 55, 48, 163;
+  --color-primary-900: 49, 46, 129;
+
+  /* Tailwind color: amber */
+  --color-warning-50: 255, 251, 235;
+  --color-warning-100: 254, 243, 199;
+  --color-warning-200: 253, 230, 138;
+  --color-warning-300: 252, 211, 77;
+  --color-warning-400: 251, 191, 36;
+  --color-warning-500: 245, 158, 11;
+  --color-warning-600: 217, 119, 6;
+  --color-warning-700: 180, 83, 9;
+  --color-warning-800: 146, 64, 14;
+  --color-warning-900: 120, 53, 15;
+
+  /* Tailwind color: red */
+  --color-danger-50: 254, 242, 242;
+  --color-danger-100: 254, 226, 226;
+  --color-danger-200: 254, 202, 202;
+  --color-danger-300: 252, 165, 165;
+  --color-danger-400: 248, 113, 113;
+  --color-danger-500: 239, 68, 68;
+  --color-danger-600: 220, 38, 38;
+  --color-danger-700: 185, 28, 28;
+  --color-danger-800: 153, 27, 27;
+  --color-danger-900: 127, 29, 29;
+
+  /* Tailwind color: green */
+  --color-success-50: 240, 253, 244;
+  --color-success-100: 220, 252, 231;
+  --color-success-200: 187, 247, 208;
+  --color-success-300: 134, 239, 172;
+  --color-success-400: 74, 222, 128;
+  --color-success-500: 34, 197, 94;
+  --color-success-600: 22, 163, 74;
+  --color-success-700: 21, 128, 61;
+  --color-success-800: 22, 101, 52;
+  --color-success-900: 20, 83, 45;
+
+  /* Tailwind color: blue */
+  --color-info-50: 239, 246, 255;
+  --color-info-100: 219, 234, 254;
+  --color-info-200: 191, 219, 254;
+  --color-info-300: 147, 197, 253;
+  --color-info-400: 96, 165, 250;
+  --color-info-500: 59, 130, 246;
+  --color-info-600: 37, 99, 235;
+  --color-info-700: 29, 78, 216;
+  --color-info-800: 30, 64, 175;
+  --color-info-900: 30, 58, 138;
+}

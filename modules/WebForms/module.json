@@ -1,0 +1,11 @@
+{
+    "name": "WebForms",
+    "alias": "webforms",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\WebForms\\App\\Providers\\WebFormsServiceProvider"
+    ],
+    "files": []
+}

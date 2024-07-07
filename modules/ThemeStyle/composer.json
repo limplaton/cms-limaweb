@@ -1,0 +1,23 @@
+{
+    "name": "crm/themestyle",
+    "description": "",
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\ThemeStyle\\": "",
+            "Modules\\ThemeStyle\\App\\": "app/",
+            "Modules\\ThemeStyle\\Database\\Factories\\": "database/factories/",
+            "Modules\\ThemeStyle\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\ThemeStyle\\Tests\\": "tests/"
+        }
+    }
+}

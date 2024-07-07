@@ -1,0 +1,80 @@
+ContentBuilder.js
+
+3 LICENSE TYPES:
+
+1) Standard Developer License (Unlimited websites)
+2) Pro Developer License (Unlimited websites + resale in product, usage in SaaS project)
+3) Super Developer License (Unlimited websites + resale in product, usage in SaaS project + access to source code for customization)
+
+____________________________________________________________
+
+
+STANDARD DEVELOPER LICENSE AGREEMENT 
+
+1. ContentBuilder.js (Product) and its SOURCE CODE are licensed, not sold. All copyrights to ContentBuilder.js are exclusively owned by the author - InnovaStudio.
+
+2. Use of ContentBuilder.js (Product) in integration or application development requires one license per developer.
+
+3. You have the right to use the Product in unlimited websites (personal or commercial). You or your clients can use the Product.
+
+4. You will be responsible for providing support to your clients, and InnovaStudio will not communicate directly with your clients under any circumstances.
+
+5 You are not allowed to re-distribute the Product as another plugin and/or sell the Product as is. You must include the Product in your custom application.
+
+6. LIMITED WARRANTY 
+Although InnovaStudio has tested the Product and reviewed the documentation, InnovaStudio makes no warranty or representation, either expressed or implied, with respect to the Product, its quality, performance, merchantability, or fitness for a particular purpose. As a result, ContentBuilder.js is licensed AS-IS, and you are assuming the entire risk as to its quality and performance. 
+InnovaStudio shall not be liable for any claim or right to recover damages, including, but not limited to, loss of profit, data, or use of the software or special, incidental, or consequential damages, or other similar claims, even if InnovaStudio has been specifically advised of the possibility of such damages.
+
+____________________________________________________________
+
+
+PRO DEVELOPER LICENSE AGREEMENT 
+
+1. ContentBuilder.js (Product) and its SOURCE CODE are licensed, not sold. All copyrights to ContentBuilder.js are exclusively owned by the author - InnovaStudio.
+
+2. Use of ContentBuilder.js (Product) in integration or application development requires one license per developer.
+
+3. You have the right to use the Product in unlimited websites (personal or commercial). You or your clients can use the Product.
+
+4. You have the right to use the Product in 1 (one) personal or commercial hosted service (SaaS project) with unlimited clients or users.
+
+5. You have the right to include/distribute the Product in 1 (one) project/application for sale (eg. CMS product, etc), without any royalty whatsoever, provided that : 
+    - You do not permit (either by explicit or implicit means) further distribution of the Product by your clients or end users. 
+	- You do not distribute the Product in a free (downloadable) project/application.
+
+6. You will be responsible for providing support to your clients, and InnovaStudio will not communicate directly with your clients under any circumstances.
+
+7. You are not allowed to re-distribute the Product as another plugin and/or sell the Product as is. You must include the Product in your custom application.
+
+8. LIMITED WARRANTY 
+Although InnovaStudio has tested the Product and reviewed the documentation, InnovaStudio makes no warranty or representation, either expressed or implied, with respect to the Product, its quality, performance, merchantability, or fitness for a particular purpose. As a result, ContentBuilder.js is licensed AS-IS, and you are assuming the entire risk as to its quality and performance. 
+InnovaStudio shall not be liable for any claim or right to recover damages, including, but not limited to, loss of profit, data, or use of the software or special, incidental, or consequential damages, or other similar claims, even if InnovaStudio has been specifically advised of the possibility of such damages.
+
+____________________________________________________________
+
+
+SUPER DEVELOPER LICENSE AGREEMENT
+
+1. ContentBuilder.js (Product) and its SOURCE CODE are licensed, not sold. All copyrights to ContentBuilder.js are exclusively owned by the author - InnovaStudio.
+
+2. Use of ContentBuilder.js (Product) in integration or application development requires one license per developer.
+
+3. You have the right to use the Product in unlimited websites (personal or commercial). You or your clients can use the Product.
+
+4. You have the right to use the Product in 3 (three) personal or commercial hosted services (SaaS projects) with unlimited clients or users.
+
+5. You have the right to include/distribute the Product in 3 (three) projects/applications for sale (eg. CMS product, etc), without any royalty whatsoever, provided that : 
+    - You do not permit (either by explicit or implicit means) further distribution of the Product by your clients or end users. 
+	- You do not distribute the Product in a free (downloadable) project/application.
+
+6. You will be responsible for providing support to your clients, and InnovaStudio will not communicate directly with your clients under any circumstances.
+
+7. You are not allowed to re-distribute the Product as another plugin and/or sell the Product as is. You must include the Product in your custom application.
+
+8. LIMITED WARRANTY 
+Although InnovaStudio has tested the Product and reviewed the documentation, InnovaStudio makes no warranty or representation, either expressed or implied, with respect to the Product, its quality, performance, merchantability, or fitness for a particular purpose. As a result, ContentBuilder.js is licensed AS-IS, and you are assuming the entire risk as to its quality and performance. 
+InnovaStudio shall not be liable for any claim or right to recover damages, including, but not limited to, loss of profit, data, or use of the software or special, incidental, or consequential damages, or other similar claims, even if InnovaStudio has been specifically advised of the possibility of such damages.
+
+
+____________________________________________________________
+https://www.innovastudio.com

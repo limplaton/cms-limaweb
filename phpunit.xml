@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
+        </testsuite>
+        <testsuite name="Modules">
+            <directory suffix="Test.php">./modules/*/Tests/Feature</directory>
+            <directory suffix="Test.php">./modules/*/Tests/Unit</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage />
+
+    <source>
+        <include>
+            <directory suffix=".php">./app</directory>
+            <directory suffix=".php">./modules</directory>
+        </include>
+        <exclude>
+            <directory suffix=".php">./modules/*/Tests</directory>
+            <directory suffix=".php">./modules/*/Database/*</directory>
+            <directory suffix=".php">./modules/*/lang</directory>
+            <directory suffix=".php">./modules/*/config</directory>
+            <directory suffix=".php">./modules/*/patchers</directory>
+            <directory suffix=".php">./modules/*/routes</directory>
+            <directory suffix=".php">./modules/*/resources</directory>
+            <directory suffix=".php">./patchers</directory>
+            <file>./app/PreInstall.php</file>
+        </exclude>
+    </source>
+
+    <php>
+        <ini name="memory_limit" value="2048M"/>
+        <env name="APP_ENV" value="testing"/>
+        <env name="BCRYPT_ROUNDS" value="4"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="MAIL_MAILER" value="array"/>
+        <env name="QUEUE_CONNECTION" value="sync"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="TELESCOPE_ENABLED" value="false"/>
+        <env name="MODULE_CACHE_ENABLED" value="true"/>
+        <env name="MEDIA_DISK" value="local"/>
+        <env name="DEBUGBAR_ENABLED" value="false"/>
+        <env name="MODEL_CACHE_ENABLED" value="false"/>
+        <env name="SETTINGS_DRIVER" value="array"/>
+        <!-- <env name="DB_CONNECTION" value="sqlite"/> -->
+        <!-- <env name="DB_DATABASE" value=":memory:"/> -->
+        <env name="DB_DATABASE" value="testing"/>
+        <env name="PUSHER_APP_ID" value="null"/>
+        <env name="PUSHER_APP_KEY" value="null"/>
+        <env name="PUSHER_APP_SECRET" value="null"/>
+        <env name="PUSHER_APP_CLUSTER" value="null"/>
+    </php>
+</phpunit>

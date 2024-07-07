@@ -1,0 +1,23 @@
+{
+    "name": "crm/comments",
+    "description": "",
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Comments\\": "",
+            "Modules\\Comments\\App\\": "app/",
+            "Modules\\Comments\\Database\\Factories\\": "database/factories/",
+            "Modules\\Comments\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Comments\\Tests\\": "tests/"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "allowJs": true,
+    "paths": {
+      "@/Activities/*": ["./modules/Activities/resources/js/*"],
+      "@/Billable/*": ["./modules/Billable/resources/js/*"],
+      "@/Brands/*": ["./modules/Brands/resources/js/*"],
+      "@/Calls/*": ["./modules/Calls/resources/js/*"],
+      "@/Comments/*": ["./modules/Comments/resources/js/*"],
+      "@/Contacts/*": ["./modules/Contacts/resources/js/*"],
+      "@/Core/*": ["./modules/Core/resources/js/*"],
+      "@/Deals/*": ["./modules/Deals/resources/js/*"],
+      "@/Documents/*": ["./modules/Documents/resources/js/*"],
+      "@/MailClient/*": ["./modules/MailClient/resources/js/*"],
+      "@/Notes/*": ["./modules/Notes/resources/js/*"],
+      "@/ThemeStyle/*": ["./modules/ThemeStyle/resources/js/*"],
+      "@/Translator/*": ["./modules/Translator/resources/js/*"],
+      "@/Users/*": ["./modules/Users/resources/js/*"],
+      "@/WebForms/*": ["./modules/WebForms/resources/js/*"],
+    }
+  },
+  "exclude": ["node_modules", "public", "_build", "_patch"]
+}

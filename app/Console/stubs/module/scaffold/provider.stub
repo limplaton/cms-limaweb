@@ -1,0 +1,171 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\ServiceProvider;
+use Modules\Core\App\Facades\Innoclapps;
+use Modules\Core\App\Facades\MailableTemplates;
+use Modules\Core\App\Facades\Notifications;
+use Modules\Core\App\Console\Scheduling\Schedule;
+
+class $CLASS$ extends ServiceProvider
+{
+    protected string $moduleName = '$MODULE$';
+
+    protected string $moduleNameLower = '$LOWER_NAME$';
+
+    /**
+     * Bootstrap any module services.
+     */
+    public function boot(): void
+    {
+        // Perform register of services
+        $this->registerCommands();
+        $this->registerScheduledTasks();
+        $this->registerTranslations();
+        $this->registerConfig();
+        $this->registerViews();
+        $this->registerNotifications();
+        $this->registerMailableTemplates();
+
+        $this->loadMigrationsFrom(module_path($this->moduleName, '$MIGRATIONS_PATH$'));
+
+        // Boot the module
+        $this->app->booted($this->bootModule(...));
+    }
+
+    /**
+     * Register any module services.
+     */
+    public function register(): void
+    {
+        $this->app->register(RouteServiceProvider::class);
+    }
+
+    /**
+     * Register commands in the format of Command::class.
+     */
+    protected function registerCommands(): void
+    {
+        // $this->commands([]);
+    }
+
+    /**
+     * Register any module scheduled tasks.
+     */
+    protected function registerScheduledTasks(): void
+    {
+        // $this->app->booted(function () {
+        //     $schedule = $this->app->make(Schedule::class);
+        //     $schedule->safeCommand('inspire')->hourly();
+        // });
+    }
+
+    /**
+     * Register module translations.
+     */
+    protected function registerTranslations(): void
+    {
+        $this->loadTranslationsFrom(module_path($this->moduleName, '$PATH_LANG$'), $this->moduleNameLower);
+    }
+
+    /**
+     * Register module config.
+     */
+    protected function registerConfig(): void
+    {
+        $this->publishes([
+            module_path($this->moduleName, '$PATH_CONFIG$/config.php') => config_path($this->moduleNameLower . '.php'),
+        ], 'config');
+
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, '$PATH_CONFIG$/config.php'), $this->moduleNameLower
+        );
+    }
+
+    /**
+     * Register module views.
+     */
+    protected function registerViews(): void
+    {
+        $viewPath = resource_path('views/modules/'.$this->moduleNameLower);
+        $sourcePath = module_path($this->moduleName, '$PATH_VIEWS$');
+
+        $this->publishes([$sourcePath => $viewPath], ['views', $this->moduleNameLower.'-module-views']);
+
+        $this->loadViewsFrom([...$this->getPublishableViewPaths(), ...[$sourcePath]], $this->moduleNameLower);
+
+        $componentNamespace = str_replace('/', '\\', config('modules.namespace').'\\'.$this->moduleName.'\\'.config('modules.paths.generator.component-class.path'));
+        Blade::componentNamespace($componentNamespace, $this->moduleNameLower);
+    }
+
+    /**
+     * Register module notifications.
+     */
+    protected function registerNotifications(): void
+    {
+        // Notifications::register([]);
+    }
+
+    /**
+     * Register module mailable templates.
+     */
+    protected function registerMailableTemplates(): void
+    {
+        // MailableTemplates::register([]);
+    }
+
+    /**
+     * Boot the module.
+     */
+    protected function bootModule() : void
+    {
+        Innoclapps::whenReadyForServing(function() {
+            Innoclapps::booted($this->shareDataToScript(...));
+        });
+
+        Innoclapps::vite(
+            $this->moduleNameLower,
+            [
+                'resources/js/app.js',
+                // 'resources/css/app.css',
+            ],
+            'build-'.$this->moduleNameLower
+        );
+    }
+
+    /**
+     * Share module related data to script.
+     */
+    protected function shareDataToScript() : void
+    {
+        Innoclapps::provideToScript([
+            '$LOWER_NAME$' => []
+        ]);
+    }
+
+    /**
+     * Get the services provided by the provider.
+     */
+    public function provides(): array
+    {
+        return [];
+    }
+
+    /**
+     * Get the publishable view paths.
+    */
+    private function getPublishableViewPaths(): array
+    {
+        $paths = [];
+
+        foreach ($this->app['config']->get('view.paths') as $path) {
+            if (is_dir($path.'/modules/'.$this->moduleNameLower)) {
+                // $paths[] = $path.'/modules/'.$this->moduleNameLower;
+            }
+        }
+
+        return $paths;
+    }
+}
